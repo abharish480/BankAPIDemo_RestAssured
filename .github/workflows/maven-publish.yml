@@ -57,3 +57,10 @@ jobs:
         with:
           name: allure-report
           path: target/allure-report
+      # Step 8: Allure Report link on github pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: success() || failure()   # Publish even if tests fail
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-report
