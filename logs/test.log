@@ -1,0 +1,599 @@
+22:23:06.525 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+22:23:06.610 [main] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+22:23:10.111 [main] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+22:41:01.808 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+22:41:01.893 [main] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+22:41:03.812 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+22:41:03.814 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+22:41:04.659 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:41:04.678 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTE5MTQ2NCwiZXhwIjoxNzU1MTk1MDY0fQ.eK4IKZGelzQCabprssbFUpL873UMRpVBUzPmQFImglw","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+22:41:04.795 [main] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+11:54:21.212 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+11:54:21.297 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+11:54:23.452 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:54:23.453 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:54:24.130 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:54:24.161 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTA2MywiZXhwIjoxNzU1MjQyNjYzfQ.4tptsz5YDS94RfowKB-FDvySNZwxwlKquPC698yvFWk","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:54:24.269 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+11:55:11.688 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+11:55:11.763 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+11:55:11.763 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+11:55:11.764 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+11:55:13.533 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:55:13.533 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:55:13.534 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+11:55:13.534 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:55:13.534 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:55:13.534 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:55:14.239 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+11:55:14.266 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+11:55:14.286 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: accountCreationTest
+11:55:14.318 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:55:14.318 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:55:14.320 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTExMywiZXhwIjoxNzU1MjQyNzEzfQ.IkfggksrECMyx7d0-vqyT0D50o0f_liEOK79YYDyvSA","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:55:14.320 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTExMywiZXhwIjoxNzU1MjQyNzEzfQ.IkfggksrECMyx7d0-vqyT0D50o0f_liEOK79YYDyvSA","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:55:14.418 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+11:55:14.439 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+11:55:14.440 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTExMywiZXhwIjoxNzU1MjQyNzEzfQ.IkfggksrECMyx7d0-vqyT0D50o0f_liEOK79YYDyvSA
+Accept=*/*
+11:55:14.526 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:55:14.527 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+11:55:14.584 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+11:56:43.922 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+11:56:44.003 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+11:56:44.003 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+11:56:44.003 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+11:56:45.862 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:56:45.862 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+11:56:45.863 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:56:45.862 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:56:45.863 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:56:45.863 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:56:46.508 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+11:56:46.525 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+11:56:46.544 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTest
+11:56:46.544 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTest(AccountCreationTest.java:28) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+11:56:46.581 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:56:46.581 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:56:46.582 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTIwNSwiZXhwIjoxNzU1MjQyODA1fQ.jHtRrFo-0D6N31FsGTgFC1YdnrZfN_XuSwV1U01oj9c","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:56:46.582 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTIwNSwiZXhwIjoxNzU1MjQyODA1fQ.jHtRrFo-0D6N31FsGTgFC1YdnrZfN_XuSwV1U01oj9c","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:56:46.656 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+11:56:46.664 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+11:56:46.664 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTIwNSwiZXhwIjoxNzU1MjQyODA1fQ.jHtRrFo-0D6N31FsGTgFC1YdnrZfN_XuSwV1U01oj9c
+Accept=*/*
+11:56:46.822 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:56:46.823 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+11:56:46.831 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+11:57:20.840 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+11:57:20.843 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:57:21.439 [main] INFO  com.api.filters.LoggingFilter - Response Status: 400
+11:57:21.459 [main] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+11:57:59.660 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+11:57:59.732 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+11:57:59.732 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+11:58:01.445 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+11:58:01.445 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:58:01.445 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:58:01.445 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:58:02.003 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+11:58:02.027 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+11:58:02.037 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:58:02.039 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTI4MSwiZXhwIjoxNzU1MjQyODgxfQ.tmEKlqb7nyKsWX9lvNxSgpEEU14N9hlsayiGGN_0NbU","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:58:02.039 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTest
+11:58:02.039 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTest(AccountCreationTest.java:28) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+11:58:02.086 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+11:58:02.102 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:58:02.102 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:58:02.125 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+11:58:02.255 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:58:02.256 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTI4MSwiZXhwIjoxNzU1MjQyODgxfQ.tmEKlqb7nyKsWX9lvNxSgpEEU14N9hlsayiGGN_0NbU","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:58:02.271 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+11:58:02.272 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTI4MSwiZXhwIjoxNzU1MjQyODgxfQ.tmEKlqb7nyKsWX9lvNxSgpEEU14N9hlsayiGGN_0NbU
+Accept=*/*
+11:58:02.359 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:58:02.360 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+11:58:02.367 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+11:58:27.184 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+11:58:27.256 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+11:58:28.793 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+11:58:28.794 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:58:29.379 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+11:58:29.397 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+11:58:29.416 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTest
+11:58:29.416 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTest(AccountCreationTest.java:28) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+11:58:29.429 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+11:58:29.457 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:58:29.458 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:58:29.613 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:58:29.615 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTMwOCwiZXhwIjoxNzU1MjQyOTA4fQ.h1DaIESCawPhUGjYcrqV-5RNGkK1KNy49xbi78jx4m4","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:58:29.715 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+11:58:29.724 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+11:58:29.748 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+11:58:29.748 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+11:58:29.907 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:58:29.907 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTMwOSwiZXhwIjoxNzU1MjQyOTA5fQ.pZwRTUZfjbpBBLFB_Pnm0w4nAyRtl8_l-kGpgdzkbHQ","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+11:58:29.917 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+11:58:29.919 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTIzOTMwOSwiZXhwIjoxNzU1MjQyOTA5fQ.pZwRTUZfjbpBBLFB_Pnm0w4nAyRtl8_l-kGpgdzkbHQ
+Accept=*/*
+11:58:30.000 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+11:58:30.000 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+11:58:30.006 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+12:16:23.949 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+12:16:24.031 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+12:16:25.955 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+12:16:25.955 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+12:16:26.608 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+12:16:26.623 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+12:16:26.643 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTest
+12:16:26.643 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTest(AccountCreationTest.java:28) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+12:16:26.656 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+12:16:26.674 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+12:16:26.674 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+12:16:26.822 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+12:16:26.824 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI0MDM4NiwiZXhwIjoxNzU1MjQzOTg2fQ.Zy1Ey5Da-LoC_udwU46qg-AU96Yj2PUf9Fs3xJcK0OU","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+12:16:26.922 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+12:16:26.925 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+12:16:26.941 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+12:16:26.941 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+12:16:27.100 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+12:16:27.101 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI0MDM4NiwiZXhwIjoxNzU1MjQzOTg2fQ.Zy1Ey5Da-LoC_udwU46qg-AU96Yj2PUf9Fs3xJcK0OU","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+12:16:27.122 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+12:16:27.122 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI0MDM4NiwiZXhwIjoxNzU1MjQzOTg2fQ.Zy1Ey5Da-LoC_udwU46qg-AU96Yj2PUf9Fs3xJcK0OU
+Content-Type=application/json
+12:16:27.215 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+12:16:27.216 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+12:16:27.242 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+12:16:42.261 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+12:16:42.335 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+12:16:42.334 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+12:16:42.334 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+12:16:44.037 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+12:16:44.037 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+12:16:44.039 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+12:16:44.039 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+12:16:44.039 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+12:16:44.039 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+12:16:44.649 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+12:16:44.667 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+12:16:44.682 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTest
+12:16:44.682 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTest(AccountCreationTest.java:28) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+12:16:44.723 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 200
+12:16:44.723 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+12:16:44.724 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI0MDQwNCwiZXhwIjoxNzU1MjQ0MDA0fQ.NpTDzuy2mG8PQ0wIrHraHoT4YEg5Jb_h8rNTnFHrCOg","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+12:16:44.737 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI0MDQwNCwiZXhwIjoxNzU1MjQ0MDA0fQ.NpTDzuy2mG8PQ0wIrHraHoT4YEg5Jb_h8rNTnFHrCOg","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+12:16:44.803 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+12:16:44.809 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+12:16:44.810 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI0MDQwNCwiZXhwIjoxNzU1MjQ0MDA0fQ.NpTDzuy2mG8PQ0wIrHraHoT4YEg5Jb_h8rNTnFHrCOg
+Content-Type=application/json
+12:16:44.900 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+12:16:44.900 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+12:16:44.908 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+21:57:52.956 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+21:57:53.031 [main] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+21:57:54.933 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+21:57:54.933 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+21:57:55.783 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:57:55.795 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI3NTI3NCwiZXhwIjoxNzU1Mjc4ODc0fQ.Z2nRcNwq6Gm-UOAliWAFYc9uwL7H-bPy8j5EHui-rBI","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+21:57:55.901 [main] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+21:58:15.581 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+21:58:15.657 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+21:58:15.658 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+21:58:15.657 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+21:58:17.352 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+21:58:17.352 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+21:58:17.352 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+21:58:17.353 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+21:58:17.353 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+21:58:17.353 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+21:58:18.075 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+21:58:18.102 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+21:58:18.109 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:58:18.111 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI3NTI5NywiZXhwIjoxNzU1Mjc4ODk3fQ.K_Tafu6nFvukTpwi4LcQ3NtviQL-Ah5hcVpPGjOVzGg","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+21:58:18.135 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:58:18.135 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI3NTI5NywiZXhwIjoxNzU1Mjc4ODk3fQ.K_Tafu6nFvukTpwi4LcQ3NtviQL-Ah5hcVpPGjOVzGg","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+21:58:18.164 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTest
+21:58:18.165 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTest(AccountCreationTest.java:28) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+21:58:18.199 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+21:58:18.228 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+21:58:18.229 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI3NTI5NywiZXhwIjoxNzU1Mjc4ODk3fQ.K_Tafu6nFvukTpwi4LcQ3NtviQL-Ah5hcVpPGjOVzGg
+Content-Type=application/json
+21:58:18.310 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:58:18.311 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+21:58:18.344 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+22:17:21.001 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+22:17:21.088 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Started: getProfileTest
+22:17:21.088 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: loginTest
+22:17:21.089 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+22:17:23.134 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:17:23.134 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:17:23.134 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+22:17:23.135 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:17:23.136 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+22:17:23.136 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:17:23.859 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:17:23.876 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+22:17:23.880 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:17:23.880 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:17:23.880 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI3NjQ0MywiZXhwIjoxNzU1MjgwMDQzfQ.YmFNS0NRDgT48MWf5EeSCUP2OSOoxMy-g28jyCZTiLw","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+22:17:23.880 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI3NjQ0MywiZXhwIjoxNzU1MjgwMDQzfQ.YmFNS0NRDgT48MWf5EeSCUP2OSOoxMy-g28jyCZTiLw","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+22:17:23.900 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTest
+22:17:23.900 [TestNG-test-API Tests-1] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTest(AccountCreationTest.java:28) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+22:17:23.996 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Passed: loginTest
+22:17:24.007 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+22:17:24.007 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI3NjQ0MywiZXhwIjoxNzU1MjgwMDQzfQ.YmFNS0NRDgT48MWf5EeSCUP2OSOoxMy-g28jyCZTiLw
+Content-Type=application/json
+22:17:24.100 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:17:24.101 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+22:17:24.135 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Passed: getProfileTest
+22:31:39.340 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:31:39.343 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:31:39.961 [main] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:31:39.978 [main] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+22:32:03.764 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:32:03.767 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:32:04.294 [main] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:32:04.314 [main] INFO  com.api.filters.LoggingFilter - Response Body: Error: Email is already in use!
+22:32:36.916 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:32:36.919 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:32:37.520 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:32:37.536 [main] INFO  com.api.filters.LoggingFilter - Response Body: User registered successfully!
+22:39:26.412 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:39:26.415 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:39:26.415 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"john_doe20252","password":"securePass123","email":"john20252@example.com","firstName":"John","lastName":"Doe","mobileNumber":"9876543210"}
+22:39:27.083 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:39:27.095 [main] INFO  com.api.filters.LoggingFilter - Response Body: User registered successfully!
+22:57:02.557 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:57:02.561 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:57:02.561 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"john_doe20253","password":"securePass123","email":"john20253@example.com","firstName":"John","lastName":"Doe","mobileNumber":"9876543210"}
+22:57:03.203 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:57:03.221 [main] INFO  com.api.filters.LoggingFilter - Response Body: User registered successfully!
+22:57:20.934 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:57:20.937 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:57:20.938 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"jane_doe2025","password":"strongPass456","email":"john@example.com","firstName":"Jane","lastName":"Doe","mobileNumber":"9123456789"}
+22:57:21.517 [main] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:57:21.537 [main] INFO  com.api.filters.LoggingFilter - Response Body: Error: Email is already in use!
+23:22:34.804 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+23:22:34.824 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+23:22:34.825 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+23:22:35.451 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+23:22:35.460 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MDM1NSwiZXhwIjoxNzU1MjgzOTU1fQ.stD7CPDlqzMYuYgvDq8p0yXF5vhxFmEZ8A5dsNgTy4s","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+23:22:35.645 [main] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+23:22:35.645 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MDM1NSwiZXhwIjoxNzU1MjgzOTU1fQ.stD7CPDlqzMYuYgvDq8p0yXF5vhxFmEZ8A5dsNgTy4s
+Content-Type=application/json
+23:22:35.645 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+23:22:35.748 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+23:22:35.749 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+23:23:05.049 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+23:23:05.053 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+23:23:05.053 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+23:23:05.646 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+23:23:05.655 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MDM4NSwiZXhwIjoxNzU1MjgzOTg1fQ.NbOSofSF3josIr9JszrJfQVs-zZbcd_gJr3LjaeHXXs","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+23:23:05.773 [main] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile
+23:23:05.773 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MDM4NSwiZXhwIjoxNzU1MjgzOTg1fQ.NbOSofSF3josIr9JszrJfQVs-zZbcd_gJr3LjaeHXXs
+Content-Type=application/json
+23:23:05.774 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+23:23:05.885 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+23:23:05.886 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+00:00:31.256 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+00:00:31.262 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+00:00:31.262 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+00:00:32.616 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+00:00:32.628 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MjYzMSwiZXhwIjoxNzU1Mjg2MjMxfQ.biya_sLewGlhd9hUk0bqyzT1NBF7jNS0snREMVb4HXE","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+00:06:08.089 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+00:06:08.092 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+00:06:08.093 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+00:06:08.851 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+00:06:08.863 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4Mjk2OCwiZXhwIjoxNzU1Mjg2NTY4fQ.4n-E6ceOPMuq5ytA2SD0ThAqYbZFcxAjaWUSa9CR2gU","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+00:12:46.477 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+00:12:46.481 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+00:12:46.482 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+00:12:47.072 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+00:12:47.081 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MzM2NiwiZXhwIjoxNzU1Mjg2OTY2fQ.JY8-uP8s0G_x9_p_C8_h5xYb_6ubUKUfXfToSEWqZ1o","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+00:12:47.195 [main] INFO  com.api.filters.LoggingFilter - Request: PUT http://64.227.160.186:8080/api/users/profile
+00:12:47.196 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MzM2NiwiZXhwIjoxNzU1Mjg2OTY2fQ.JY8-uP8s0G_x9_p_C8_h5xYb_6ubUKUfXfToSEWqZ1o
+Content-Type=application/json
+00:12:47.196 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"firstName":"AlokTest","lastName":"Yadav Last","email":"aloktest@example.com","mobileNumber":"9879879870"}
+00:12:47.296 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+00:12:47.297 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"aloktest@example.com","firstName":"AlokTest","lastName":"Yadav Last","mobileNumber":"9879879870"}
+00:14:34.945 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+00:14:34.951 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+00:14:34.952 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+00:14:35.550 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+00:14:35.563 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MzQ3NSwiZXhwIjoxNzU1Mjg3MDc1fQ.6AiHEpCdeY8TzsDf1yZBsAcAnbIjbYHdIWsWTpL2obo","type":"Bearer","id":1,"username":"uday1234","email":"aloktest@example.com","roles":["ROLE_USER"]}
+00:14:35.715 [main] INFO  com.api.filters.LoggingFilter - Request: PUT http://64.227.160.186:8080/api/users/profile
+00:14:35.716 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NTI4MzQ3NSwiZXhwIjoxNzU1Mjg3MDc1fQ.6AiHEpCdeY8TzsDf1yZBsAcAnbIjbYHdIWsWTpL2obo
+Content-Type=application/json
+00:14:35.716 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"firstName":"John","lastName":"Doe","email":"john.doe@example.com","mobileNumber":"1234567890"}
+00:14:35.895 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+00:14:35.895 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"john.doe@example.com","firstName":"John","lastName":"Doe","mobileNumber":"1234567890"}
+10:09:09.501 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+10:09:09.505 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+10:09:09.506 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"john_doe2025","password":"securePass123","email":"john@example.com","firstName":"John","lastName":"Doe","mobileNumber":"9876543210"}
+10:09:10.153 [main] INFO  com.api.filters.LoggingFilter - Response Status: 400
+10:09:10.166 [main] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+10:14:42.141 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+10:14:42.145 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+10:14:42.146 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"oma.vandervort","password":"cgrj3fm9w","email":"dannie.grady@yahoo.com","firstName":"Kimberly","lastName":"Cruickshank","mobileNumber":"(084) 649-6389"}
+10:14:42.670 [main] INFO  com.api.filters.LoggingFilter - Response Status: 500
+10:14:42.690 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"timestamp":"2025-09-03 04:44:42","status":500,"error":"System Error","message":"An unexpected error occurred","path":"uri=/api/auth/signup","solution":"Please try again later or contact support","errorCode":"SYS_001"}
+10:17:08.290 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+10:17:08.294 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+10:17:08.295 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"katrinacrooks","password":"uvrbsu9gme1","email":"octavio.schroeder@hotmail.com","firstName":"Perry","lastName":"Streich","mobileNumber":"7188800133"}
+10:17:08.866 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+10:17:08.880 [main] INFO  com.api.filters.LoggingFilter - Response Body: User registered successfully!
+21:39:46.943 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+21:39:46.947 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+21:39:46.948 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"jedgrant","password":"ohaviafdkm","email":"augustina.crist@gmail.com","firstName":"Dinah","lastName":"Wiza","mobileNumber":"7814031035"}
+21:39:47.603 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:39:47.619 [main] INFO  com.api.filters.LoggingFilter - Response Body: User registered successfully!
+21:40:36.233 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+21:40:36.238 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+21:40:36.238 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"everettedach","password":"az5x0877h","email":"traci.lynch@gmail.com","firstName":"Candyce","lastName":"Bernier","mobileNumber":"0371366581"}
+21:40:36.868 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:40:36.876 [main] INFO  com.api.filters.LoggingFilter - Response Body: User registered successfully!
+21:41:55.085 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+21:41:55.089 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+21:41:55.090 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+21:41:55.656 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:41:55.670 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNTkxNCwiZXhwIjoxNzU2OTE5NTE0fQ.zC34Pt5S7SiLA8wsXrsS4l3a1Q7a2qfT9D7ddO7ZoMA","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+21:41:55.785 [main] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile?id=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNTkxNCwiZXhwIjoxNzU2OTE5NTE0fQ.zC34Pt5S7SiLA8wsXrsS4l3a1Q7a2qfT9D7ddO7ZoMA
+21:41:55.785 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNTkxNCwiZXhwIjoxNzU2OTE5NTE0fQ.zC34Pt5S7SiLA8wsXrsS4l3a1Q7a2qfT9D7ddO7ZoMA
+Content-Type=application/json
+21:41:55.785 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+21:41:55.933 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:41:55.934 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+21:43:39.844 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+21:43:39.848 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+21:43:39.849 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+21:43:40.339 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/login
+21:43:40.343 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+21:43:40.343 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+21:43:40.609 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:43:40.619 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNjAxOSwiZXhwIjoxNzU2OTE5NjE5fQ.Q5eVM5NLQeO9Z-g-ARWdOvsDf-3EvvMM_RFeJi9yob0","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+21:43:40.731 [main] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile?id=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNjAxOSwiZXhwIjoxNzU2OTE5NjE5fQ.Q5eVM5NLQeO9Z-g-ARWdOvsDf-3EvvMM_RFeJi9yob0
+21:43:40.732 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNjAxOSwiZXhwIjoxNzU2OTE5NjE5fQ.Q5eVM5NLQeO9Z-g-ARWdOvsDf-3EvvMM_RFeJi9yob0
+Content-Type=application/json
+21:43:40.732 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+21:43:40.895 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:43:40.895 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+21:43:41.057 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:43:41.067 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNjAyMCwiZXhwIjoxNzU2OTE5NjIwfQ.4EKsLJL3uoqw4SF8doSW43AVtWIYuho8pIOo0shVnTY","type":"Bearer","id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","roles":["ROLE_USER"]}
+21:43:41.176 [main] INFO  com.api.filters.LoggingFilter - Request: GET http://64.227.160.186:8080/api/users/profile?id=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNjAyMCwiZXhwIjoxNzU2OTE5NjIwfQ.4EKsLJL3uoqw4SF8doSW43AVtWIYuho8pIOo0shVnTY
+21:43:41.178 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZGF5MTIzNCIsImlhdCI6MTc1NjkxNjAyMCwiZXhwIjoxNzU2OTE5NjIwfQ.4EKsLJL3uoqw4SF8doSW43AVtWIYuho8pIOo0shVnTY
+Content-Type=application/json
+21:43:41.178 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"uday1234","password":"uday12345"}
+21:43:41.309 [main] INFO  com.api.filters.LoggingFilter - Response Status: 200
+21:43:41.310 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"id":1,"username":"uday1234","email":"ALOK1234@yahoo.com","firstName":"Alok","lastName":"Yadav","mobileNumber":"6666666666"}
+21:44:40.240 [main] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/forgot-password
+21:44:40.246 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+21:44:40.246 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"email":"john@example.com"}
+21:44:40.789 [main] INFO  com.api.filters.LoggingFilter - Response Status: 500
+21:44:40.804 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"timestamp":"2025-09-03 16:14:40","status":500,"error":"System Error","message":"An unexpected error occurred","path":"uri=/api/auth/forgot-password","solution":"Please try again later or contact support","errorCode":"SYS_001"}

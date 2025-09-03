@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="methods" name="Failed suite [Parallel Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.api.listeners.TestListeners"/>
+  </listeners>
+  <test thread-count="3" parallel="methods" name="API Tests(failed)">
+    <classes>
+      <class name="com.api.tests.AccountCreationTest">
+        <methods>
+          <include name="accountCreationTest"/>
+        </methods>
+      </class> <!-- com.api.tests.AccountCreationTest -->
+    </classes>
+  </test> <!-- API Tests(failed) -->
+</suite> <!-- Failed suite [Parallel Test Suite] -->
