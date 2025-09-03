@@ -28,7 +28,7 @@ jobs:
 
       # Step 3: Run Maven tests
       - name: Run Tests with Maven
-        run: mvn clean test
+        run: mvn clean test -Dsuite=suite.xml
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
