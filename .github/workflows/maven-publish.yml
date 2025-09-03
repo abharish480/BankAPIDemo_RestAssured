@@ -67,4 +67,8 @@ jobs:
       # Step 9: Allure Report link on workflow
       - name: Add Allure Report link to summary
         run: echo "🔗 [View Allure Report](https://abharish480.github.io/BankAPIDemo_RestAssured/)" >> $GITHUB_STEP_SUMMARY
+        # Step 9: Allure Report link on workflow
+      - name: Add Allure Report link to summary
+        run: echo "🔗 [View Allure Report](https://abharish480.github.io/BankAPIDemo_RestAssured/)" >> $GITHUB_STEP_SUMMARY
+
 
