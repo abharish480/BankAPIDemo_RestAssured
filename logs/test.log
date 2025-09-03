@@ -597,3 +597,180 @@ Content-Type=application/json
 21:44:40.246 [main] INFO  com.api.filters.LoggingFilter - Request payload: {"email":"john@example.com"}
 21:44:40.789 [main] INFO  com.api.filters.LoggingFilter - Response Status: 500
 21:44:40.804 [main] INFO  com.api.filters.LoggingFilter - Response Body: {"timestamp":"2025-09-03 16:14:40","status":500,"error":"System Error","message":"An unexpected error occurred","path":"uri=/api/auth/forgot-password","solution":"Please try again later or contact support","errorCode":"SYS_001"}
+22:35:30.537 [main] INFO  com.api.listeners.TestListeners - Suite Started: {}
+22:35:30.634 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTestViaJsonPayloadViaPaths
+22:35:30.634 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTest
+22:35:30.634 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTestViaJsonPayload
+22:35:32.450 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:35:32.450 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:35:32.450 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:35:32.450 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"john_doe20252","password":"securePass123","email":"john20252@example.com","firstName":"John","lastName":"Doe","mobileNumber":"9876543210"}
+22:35:32.450 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:35:32.450 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"john_doe20252","password":"securePass123","email":"john20252@example.com","firstName":"John","lastName":"Doe","mobileNumber":"9876543210"}
+22:35:32.455 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:35:32.455 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:35:32.462 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"mariloukohler","password":"vptpxb5246","email":"chet.schuppe@gmail.com","firstName":"Donna","lastName":"Quigley","mobileNumber":"3118883593"}
+22:35:32.997 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:35:32.997 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:35:33.007 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+22:35:33.008 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+22:35:33.021 [TestNG-test-API Tests-3] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTestViaJsonPayloadViaPaths
+22:35:33.021 [TestNG-test-API Tests-2] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTestViaJsonPayload
+22:35:33.021 [TestNG-test-API Tests-3] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTestViaJsonPayloadViaPaths(AccountCreationTest.java:76) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+22:35:33.021 [TestNG-test-API Tests-2] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: Status code is not matching expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTestViaJsonPayload(AccountCreationTest.java:47) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+22:35:33.050 [TestNG-test-API Tests-3] INFO  com.api.listeners.TestListeners - Test Started: duplicateEmailTest
+22:35:33.061 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: accountCreationTestViaTestNGDataProvider
+22:35:33.073 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:35:33.073 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:35:33.074 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"john_doe20252","password":"securePass123","email":"john20252@example.com","firstName":"John","lastName":"Doe","mobileNumber":"9876543210"}
+22:35:33.128 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Status: 200
+22:35:33.128 [TestNG-test-API Tests-1] INFO  com.api.filters.LoggingFilter - Response Body: User registered successfully!
+22:35:33.176 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:35:33.177 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+22:35:33.178 [TestNG-test-API Tests-2] ERROR com.api.listeners.TestListeners - Test Failed: accountCreationTestViaTestNGDataProvider
+22:35:33.178 [TestNG-test-API Tests-2] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1429) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.accountCreationTestViaTestNGDataProvider(AccountCreationTest.java:63) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+22:35:33.183 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:35:33.183 [TestNG-test-API Tests-2] INFO  com.api.listeners.TestListeners - Test Started: validSignupTest
+22:35:33.183 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:35:33.183 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"jane_doe2025","password":"strongPass456","email":"john@example.com","firstName":"Jane","lastName":"Doe","mobileNumber":"9123456789"}
+22:35:33.194 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request: POST http://64.227.160.186:8080/api/auth/signup
+22:35:33.195 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Headers: Accept=application/json, application/javascript, text/javascript, text/json
+Content-Type=application/json
+22:35:33.195 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Request payload: {"username":"john_doe20253","password":"securePass123","email":"john20253@example.com","firstName":"John","lastName":"Doe","mobileNumber":"9876543210"}
+22:35:33.213 [TestNG-test-API Tests-1] INFO  com.api.listeners.TestListeners - Test Passed: accountCreationTest
+22:35:33.261 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:35:33.262 [TestNG-test-API Tests-2] INFO  com.api.filters.LoggingFilter - Response Body: Error: Username is already taken!
+22:35:33.264 [TestNG-test-API Tests-2] ERROR com.api.listeners.TestListeners - Test Failed: validSignupTest
+22:35:33.264 [TestNG-test-API Tests-2] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1429) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.validSignupTest(AccountCreationTest.java:83) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+22:35:33.270 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Status: 400
+22:35:33.271 [TestNG-test-API Tests-3] INFO  com.api.filters.LoggingFilter - Response Body: Error: Email is already in use!
+22:35:33.272 [TestNG-test-API Tests-3] ERROR com.api.listeners.TestListeners - Test Failed: duplicateEmailTest
+22:35:33.274 [TestNG-test-API Tests-3] ERROR com.api.listeners.TestListeners - Exception: 
+java.lang.AssertionError: expected [409] but found [400]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1429) ~[testng-7.10.2.jar:7.10.2]
+	at com.api.tests.AccountCreationTest.duplicateEmailTest(AccountCreationTest.java:90) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
