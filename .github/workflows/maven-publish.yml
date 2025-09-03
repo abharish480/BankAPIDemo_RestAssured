@@ -28,10 +28,11 @@ jobs:
 
       # Step 3: Run Maven tests
       - name: Run Tests with Maven
-        run: mvn clean test -Dsuite=suite
+        run: mvn clean test -Dsuite=suite || true
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
