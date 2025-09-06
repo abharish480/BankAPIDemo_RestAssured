@@ -1,5 +1,6 @@
 # Maven build
 /target/
+/allure-results/
 
 # TestNG reports
 /test-output/
@@ -19,6 +20,7 @@
 .idea/
 .vscode/
 *.iml
+.classpath
 
 # Ignore OS files
 .DS_Store

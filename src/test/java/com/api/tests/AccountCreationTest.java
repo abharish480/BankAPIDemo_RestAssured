@@ -7,15 +7,24 @@ import org.testng.annotations.Test;
 import com.api.base.AuthService;
 import com.api.constants.TestDataPaths;
 import com.api.models.request.SignupRequest;
+import com.api.utils.AllureLogger;
 import com.api.utils.JsonUtils;
 import com.api.utils.TestDataLoader;
 import com.github.javafaker.Faker;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.response.Response;
+import io.qameta.allure.Attachment;
 
+@Epic("Authentication service")
+@Feature("Signup")
 public class AccountCreationTest {
-
-	@Test(description = "Creat account .." , groups = {"sanity", "smoke" ,"regression"})
+	
+	@Test(description = "Creat account with valida data" , groups = {"sanity", "smoke" ,"regression"})
+	@Severity(SeverityLevel.BLOCKER)
 	public void accountCreationTest() {
 		Faker faker = new Faker();
 		SignupRequest request = new SignupRequest.Builder()
@@ -29,7 +38,9 @@ public class AccountCreationTest {
 		
 		AuthService authService = new AuthService();
 		Response response = authService.signup(request);
-		System.out.println(response.asPrettyString());
+		//System.out.println(response.asPrettyString());
+		AllureLogger.log("Response Body : ", response.asPrettyString());
+		AllureLogger.logResponseInline(response.asPrettyString());
 		Assert.assertEquals(response.getStatusCode(), 200 ,"Status code is not matching");
 		Assert.assertEquals(response.getBody().asPrettyString(), "User registered successfully!" ,"Response body is not matching");
 	}
@@ -37,13 +48,14 @@ public class AccountCreationTest {
 	
 	
 	@Test(description = "Create account using JSON payload")
+	@Severity(SeverityLevel.BLOCKER)
 	public void accountCreationTestViaJsonPayload() {
 	    SignupRequest request = JsonUtils.readJsonAsObject(
 	        "src/test/resources/payloads/signupPayload.json", SignupRequest.class);
 
 	    AuthService authService = new AuthService();
 	    Response response = authService.signup(request);
-
+	    AllureLogger.log("Response Body : ", response.asPrettyString());
 	    Assert.assertEquals(response.getStatusCode(), 200, "Status code is not matching");
 	}
 	
@@ -56,23 +68,24 @@ public class AccountCreationTest {
 	}
 	
 
-	@Test(dataProvider = "signupData")
+	@Test(dataProvider = "signupData",description = "Create account using TestNG data provider")
 	public void accountCreationTestViaTestNGDataProvider(SignupRequest request) {
 	    AuthService authService = new AuthService();
 	    Response response = authService.signup(request);
+	    AllureLogger.log("Response Body : ", response.asPrettyString());
 	    Assert.assertEquals(response.getStatusCode(), 200);
 	}
 	
 	
 
-	@Test(description = "Create account using JSON payload")
+	@Test(description = "Create account using JSON payload with constants")
 	public void accountCreationTestViaJsonPayloadViaPaths() {
 	    SignupRequest request = JsonUtils.readJsonAsObject(
 	        TestDataPaths.SIGNUP_PAYLOAD, SignupRequest.class);
 
 	    AuthService authService = new AuthService();
 	    Response response = authService.signup(request);
-
+	    AllureLogger.log("Response Body : ", response.asPrettyString());
 	    Assert.assertEquals(response.getStatusCode(), 200, "Status code is not matching");
 	}
 	
@@ -84,9 +97,11 @@ public class AccountCreationTest {
 	}
 
 	@Test(description = "Duplicate email test")
+	@Severity(SeverityLevel.CRITICAL)
 	public void duplicateEmailTest() {
 	    SignupRequest request = TestDataLoader.getSignupPayload("duplicateEmail");
 	    Response response = new AuthService().signup(request);
+	    AllureLogger.log("Response Body : ", response.asPrettyString());
 	    Assert.assertEquals(response.getStatusCode(), 409); // example conflict
 	}
 	

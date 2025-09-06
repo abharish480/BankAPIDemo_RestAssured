@@ -3,8 +3,9 @@
        thread-count="3">
 
     <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
         <listener
-            class-name="com.api.listeners.TestListeners"/>
+            class-name="com.api.listeners.TestListeners"/>   
     </listeners>
 
     <test name="API Tests">
