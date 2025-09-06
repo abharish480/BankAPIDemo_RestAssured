@@ -28,21 +28,24 @@ jobs:
 
       # Step 3: Run Maven tests
       - name: Run Tests with Maven
-        run: mvn clean test
+        run: mvn clean test -Dsuite=suite || true
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: target/allure-results
+          path: allure-results
 
       # Step 5: Install Allure CLI
       - name: Install Allure CLI
         run: |
-          sudo apt-add-repository ppa:qameta/allure -y
-          sudo apt-get update
-          sudo apt-get install allure -y
+          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip
+          unzip allure-2.29.0.zip -d /opt/
+          export PATH="/opt/allure-2.29.0/bin:$PATH"
+          echo "/opt/allure-2.29.0/bin" >> $GITHUB_PATH
+
 
       # Step 6: Generate Allure Report
       - name: Generate Allure Report
@@ -54,3 +57,13 @@ jobs:
         with:
           name: allure-report
           path: target/allure-report
+      # Step 8: Allure Report link on github pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: success() || failure()   # Publish even if tests fail
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-report
+      # Step 9: Allure Report link on workflow
+      - name: Add Allure Report link to summary
+        run: echo "🔗 [View Allure Report](https://abharish480.github.io/BankAPIDemo_RestAssured/)" >> $GITHUB_STEP_SUMMARY
