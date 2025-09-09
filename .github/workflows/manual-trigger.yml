@@ -29,12 +29,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Generate timestamp for unique report folder
+      # Step 1: Generate timestamp
       - name: Generate timestamp
         id: timestamp
         run: echo "timestamp=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
 
-      # Step 2: Checkout code from selected branch
+      # Step 2: Checkout code
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
@@ -48,7 +48,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      # Step 4: Clean old Allure results
+      # Step 4: Clean old Allure directories
       - name: Clean Allure directories
         run: rm -rf target/allure-results target/allure-report || true
 
@@ -84,25 +84,31 @@ jobs:
           allure generate target/allure-results \
             -o target/allure-report-${{ steps.timestamp.outputs.timestamp }} --clean
 
-      # Step 9: Upload generated report
-      - name: Upload Allure Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: target/allure-report-${{ steps.timestamp.outputs.timestamp }}
+      # Step 9: Create redirect index.html for root
+      - name: Create redirect index.html
+        run: |
+          mkdir -p target/allure-redirect
+          echo "<meta http-equiv='refresh' content='0; url=${{ steps.timestamp.outputs.timestamp }}/'>" > target/allure-redirect/index.html
 
-      # Step 10: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      # Step 10: Deploy timestamped report
+      - name: Deploy timestamped report
         uses: peaceiris/actions-gh-pages@v4
-        if: success() || failure()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: target/allure-report-${{ steps.timestamp.outputs.timestamp }}
           destination_dir: ${{ steps.timestamp.outputs.timestamp }}
           keep_files: true
 
-      # Step 11: Add link to workflow summary
+      # Step 11: Deploy redirect to root
+      - name: Deploy redirect to root
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-redirect
+          destination_dir: .
+          keep_files: true
+
+      # Step 12: Add link to workflow summary
       - name: Add Report Link to Summary
         if: always()
         run: echo "🔗 [View Allure Report](https://abharish480.github.io/BankAPIDemo_RestAssured/${{ steps.timestamp.outputs.timestamp }}/)" >> $GITHUB_STEP_SUMMARY
