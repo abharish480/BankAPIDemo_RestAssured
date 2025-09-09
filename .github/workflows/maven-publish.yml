@@ -29,6 +29,10 @@ on:
         description: "Cucumber/TestNG tags to run"
         required: false
         default: "@regression"
+      suite:
+        description: "TestNG suite file to execute"
+        required: false
+        default: "suite.xml"
 
 jobs:
   build:
@@ -46,21 +50,21 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-          
-       # Step 2.5: Clean Allure results   
-      - name: Clean old Allure results
-        run: rm -rf target/allure-results || true
 
+      # Step 2.5: Clean old Allure + Report directories
+      - name: Clean old Allure results
+        run: |
+          rm -rf target/allure-results || true
+          rm -rf target/allure-report || true
 
       # Step 3: Run Maven tests
       - name: Run Tests with Maven
         run: |
-         mvn clean test \
-           -Denv=${{ github.event.inputs.environment || 'QA' }} \
-          -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} \
-          -Dcucumber.filter.tags="${{ github.event.inputs.tags || '@regression' }}" \
-          -Dsurefire.suiteXmlFiles=${{ github.event.inputs.suite || 'suite.xml' }} || true
-
+          mvn clean test \
+            -Denv=${{ github.event.inputs.environment || 'QA' }} \
+            -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} \
+            -Dcucumber.filter.tags="${{ github.event.inputs.tags || '@regression' }}" \
+            -Dsurefire.suiteXmlFiles=${{ github.event.inputs.suite || 'suite.xml' }} || true
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
@@ -75,9 +79,7 @@ jobs:
         run: |
           wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip
           unzip allure-2.29.0.zip -d /opt/
-          export PATH="/opt/allure-2.29.0/bin:$PATH"
           echo "/opt/allure-2.29.0/bin" >> $GITHUB_PATH
-
 
       # Step 6: Generate Allure Report
       - name: Generate Allure Report
@@ -91,6 +93,7 @@ jobs:
         with:
           name: allure-report
           path: target/allure-report
+
       # Step 8: Allure Report link on github pages
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -99,6 +102,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: target/allure-report
           keep_files: false
+
       # Step 9: Allure Report link on workflow
       - name: Add Allure Report link to summary
         if: always()
