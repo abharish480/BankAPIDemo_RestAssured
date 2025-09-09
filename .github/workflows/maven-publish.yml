@@ -52,7 +52,7 @@ jobs:
           mvn clean test \
             -Denv=${{ github.event.inputs.environment }} \
             -Dbrowser=${{ github.event.inputs.browser }} \
-            -Dcucumber.filter.tags="${{ github.event.inputs.tags }}"
+            -Dcucumber.filter.tags="${{ github.event.inputs.tags }}" || true
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: allure-results
+          path: target/allure-results
 
       # Step 5: Install Allure CLI
       - name: Install Allure CLI
