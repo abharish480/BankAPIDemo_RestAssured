@@ -30,9 +30,9 @@ on:
         required: false
         default: "@regression"
       suite:
-      description: "TestNG suite file to execute"
-      required: false
-      default: "suite.xml"
+        description: "TestNG suite file to execute"
+        required: false
+        default: "suite.xml"
 
 jobs:
   build:
