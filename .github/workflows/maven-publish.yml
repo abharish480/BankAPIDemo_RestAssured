@@ -53,7 +53,7 @@ jobs:
            -Denv=${{ github.event.inputs.environment || 'QA' }} \
           -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} \
           -Dcucumber.filter.tags="${{ github.event.inputs.tags || '@regression' }}" \
-          -Dsurefire.suiteXmlFiles=testng/${{ github.event.inputs.suite || 'suite.xml' }} || true
+          -Dsurefire.suiteXmlFiles=${{ github.event.inputs.suite || 'suite.xml' }} || true
 
 
       # Step 4: Upload Allure results as an artifact
