@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: target/allure-results
+          path: allure-results
 
       # Step 5: Install Allure CLI
       - name: Install Allure CLI
@@ -69,6 +69,7 @@ jobs:
           unzip allure-2.29.0.zip -d /opt/
           export PATH="/opt/allure-2.29.0/bin:$PATH"
           echo "/opt/allure-2.29.0/bin" >> $GITHUB_PATH
+
 
       # Step 6: Generate Allure Report
       - name: Generate Allure Report
@@ -89,7 +90,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: target/allure-report
-          keep_files: false
       # Step 9: Allure Report link on workflow
       - name: Add Allure Report link to summary
         if: always()
