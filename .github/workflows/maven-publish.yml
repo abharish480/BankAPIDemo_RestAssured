@@ -69,7 +69,10 @@ jobs:
           unzip allure-2.29.0.zip -d /opt/
           export PATH="/opt/allure-2.29.0/bin:$PATH"
           echo "/opt/allure-2.29.0/bin" >> $GITHUB_PATH
-
+          
+      - name: Debug:List Allure Results
+          if:always()
+          run:ls -R target/allure-results || echo "No results found"
 
       # Step 6: Generate Allure Report
       - name: Generate Allure Report
@@ -90,6 +93,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: target/allure-report
+          keep_files: false
       # Step 9: Allure Report link on workflow
       - name: Add Allure Report link to summary
         if: always()
