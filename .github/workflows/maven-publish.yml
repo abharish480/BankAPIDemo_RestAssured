@@ -73,10 +73,12 @@ jobs:
 
       # Step 6: Generate Allure Report
       - name: Generate Allure Report
+        if: always()
         run: allure generate target/allure-results -o target/allure-report --clean
 
       # Step 7: Upload Allure Report as artifact
       - name: Upload Allure Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
@@ -90,4 +92,5 @@ jobs:
           publish_dir: target/allure-report
       # Step 9: Allure Report link on workflow
       - name: Add Allure Report link to summary
+        if: always()
         run: echo "🔗 [View Allure Report](https://abharish480.github.io/BankAPIDemo_RestAssured/)" >> $GITHUB_STEP_SUMMARY
