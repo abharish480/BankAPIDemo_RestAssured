@@ -1,0 +1,163 @@
+name: Unified Build with Allure and Build Number
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: "30 12 * * *"   # Daily at 6 PM IST
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run workflow from"
+        required: true
+        default: "main"
+      environment:
+        description: "Target environment"
+        required: true
+        default: "QA"
+      browser:
+        description: "Browser to use"
+        required: true
+        default: "chrome"
+      tags:
+        description: "Cucumber/TestNG tags"
+        required: false
+        default: "@regression"
+      suite:
+        description: "TestNG suite file"
+        required: false
+        default: "suite.xml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout main repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch || github.ref_name }}
+
+      # Checkout gh-pages to access build history
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      # Read and increment build number
+      - name: Read and increment build number
+        id: buildnum
+        run: |
+          BUILD_FILE="gh-pages/build-number.txt"
+          if [ -f "$BUILD_FILE" ]; then
+            BUILD_NUM=$(cat "$BUILD_FILE")
+          else
+            BUILD_NUM=0
+          fi
+          NEW_BUILD_NUM=$((BUILD_NUM + 1))
+          echo "$NEW_BUILD_NUM" > "$BUILD_FILE"
+          echo "build_number=$NEW_BUILD_NUM" >> $GITHUB_OUTPUT
+
+      # Clean old builds (older than 7 days)
+      - name: Clean old builds
+        run: |
+          cd gh-pages
+          find . -maxdepth 1 -type d -name "build-*" | while read dir; do
+            last_modified=$(git log -1 --format="%at" -- "$dir")
+            now=$(date +%s)
+            age=$(( (now - last_modified) / 86400 ))
+            if [ "$age" -gt 7 ]; then
+              echo "🧹 Removing $dir (age: $age days)"
+              rm -rf "$dir"
+              git rm -r "$dir"
+            fi
+          done
+          cd ..
+
+      # Commit cleanup and updated build number
+      - name: Commit cleanup and build number
+        run: |
+          cd gh-pages
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "🧹 Cleaned old builds and updated build number"
+          git push origin gh-pages
+          cd ..
+
+      # Set up JDK
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      # Clean old Allure results
+      - name: Clean Allure directories
+        run: rm -rf target/allure-results target/allure-report || true
+
+      # Run Maven tests
+      - name: Run Tests
+        run: |
+          mvn clean test \
+            -Denv=${{ github.event.inputs.environment || 'QA' }} \
+            -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} \
+            -Dcucumber.filter.tags="${{ github.event.inputs.tags || '@regression' }}" \
+            -Dsurefire.suiteXmlFiles=${{ github.event.inputs.suite || 'suite.xml' }} || true
+
+      # Upload raw Allure results
+      - name: Upload Allure Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: target/allure-results
+
+      # Install Allure CLI
+      - name: Install Allure CLI
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip
+          unzip allure-2.29.0.zip -d /opt/
+          echo "/opt/allure-2.29.0/bin" >> $GITHUB_PATH
+
+      # Generate Allure Report
+      - name: Generate Allure Report
+        if: always()
+        run: |
+          mkdir -p target/allure-report-build-${{ steps.buildnum.outputs.build_number }}
+          allure generate target/allure-results \
+            -o target/allure-report-build-${{ steps.buildnum.outputs.build_number }} --clean
+
+      # Create redirect index.html for root
+      - name: Create redirect index.html
+        run: |
+          mkdir -p target/allure-redirect
+          echo "<meta http-equiv='refresh' content='0; url=build-${{ steps.buildnum.outputs.build_number }}/'>" > target/allure-redirect/index.html
+
+      # Deploy Allure Report to build folder
+      - name: Deploy Allure Report
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-report-build-${{ steps.buildnum.outputs.build_number }}
+          destination_dir: build-${{ steps.buildnum.outputs.build_number }}
+          keep_files: true
+
+      # Deploy redirect to root
+      - name: Deploy redirect to root
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-redirect
+          destination_dir: .
+          keep_files: true
+
+      # Add link to workflow summary
+      - name: Add Report Link to Summary
+        if: always()
+        run: echo "🔗 [View Allure Report](https://abharish480.github.io/BankAPIDemo_RestAssured/build-${{ steps.buildnum.outputs.build_number }}/)" >> $GITHUB_STEP_SUMMARY
