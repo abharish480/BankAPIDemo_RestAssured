@@ -71,6 +71,7 @@ jobs:
 
       - name: Run Tests and Capture Status
         id: teststatus
+        continue-on-error: true
         run: |
           mvn clean test \
             -Denv=${{ github.event.inputs.environment || 'QA' }} \
