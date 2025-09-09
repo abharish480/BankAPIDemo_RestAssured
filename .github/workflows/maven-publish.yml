@@ -29,7 +29,6 @@ on:
         description: "Cucumber/TestNG tags to run"
         required: false
         default: "@regression"
-
       suite:
       description: "TestNG suite file to execute"
       required: false
