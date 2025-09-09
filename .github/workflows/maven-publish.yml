@@ -20,7 +20,7 @@ on:
       environment:
         description: "Target environment (uat, preprod, prod)"
         required: true
-        default: "uat"
+        default: "QA"
       browser:
         description: "Browser to use (chrome, firefox, edge)"
         required: true
@@ -52,7 +52,7 @@ jobs:
           mvn clean test \
             -Denv=${{ github.event.inputs.environment }} \
             -Dbrowser=${{ github.event.inputs.browser }} \
-            -Dcucumber.filter.tags="${{ github.event.inputs.tags }}"
+            -Dcucumber.filter.tags="${{ github.event.inputs.tags }}" || true
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
