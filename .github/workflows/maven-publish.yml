@@ -1,3 +1,6 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
 name: Maven Build with Allure
 
 on:
@@ -81,19 +84,8 @@ jobs:
       # Step 6: Generate Allure Report
       - name: Generate Allure Report
         if: always()
-        run: |
-          if [ ! -d "target/allure-results" ] || [ -z "$(ls -A target/allure-results)" ]; then
-            echo "⚠️ No Allure results found, generating placeholder report"
-            mkdir -p target/allure-results
-            echo "{}" > target/allure-results/dummy.json
-          fi
-          allure generate target/allure-results -o target/allure-report --clean
-
-      # Step 6.1: Add cache-buster
-      - name: Add cache-buster
-        if: always()
-        run: echo "Build timestamp:$(date)" > target/allure-report/build-info.txt
-
+        run: run:allure generate target/allure-results -o target/allure-report --clean
+        
       # Step 7: Upload Allure Report as artifact
       - name: Upload Allure Report
         if: always()
