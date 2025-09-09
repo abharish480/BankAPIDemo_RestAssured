@@ -49,10 +49,12 @@ jobs:
       # Step 3: Run Maven tests
       - name: Run Tests with Maven
         run: |
-          mvn clean test \
-            -Denv=${{ github.event.inputs.environment }} \
-            -Dbrowser=${{ github.event.inputs.browser }} \
-            -Dcucumber.filter.tags="${{ github.event.inputs.tags }}" || true
+         mvn clean test \
+           -Denv=${{ github.event.inputs.environment || 'QA' }} \
+          -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} \
+          -Dcucumber.filter.tags="${{ github.event.inputs.tags || '@regression' }}" \
+          -Dsurefire.suiteXmlFiles=testng/${{ github.event.inputs.suite || 'suite.xml' }} || true
+
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
