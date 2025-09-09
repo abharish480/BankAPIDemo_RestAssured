@@ -1,0 +1,88 @@
+name: Manual Test Run with Allure
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run workflow from"
+        required: true
+        default: "main"
+      environment:
+        description: "Target environment"
+        required: true
+        default: "QA"
+      browser:
+        description: "Browser to use"
+        required: true
+        default: "chrome"
+      tags:
+        description: "Cucumber/TestNG tags"
+        required: false
+        default: "@regression"
+      suite:
+        description: "TestNG suite file"
+        required: false
+        default: "suite.xml"
+
+jobs:
+  manual-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.branch }}
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Clean Allure directories
+        run: rm -rf target/allure-results target/allure-report || true
+
+      - name: Run Tests
+        run: |
+          mvn clean test \
+            -Denv=${{ inputs.environment }} \
+            -Dbrowser=${{ inputs.browser }} \
+            -Dcucumber.filter.tags="${{ inputs.tags }}" \
+            -Dsurefire.suiteXmlFiles=${{ inputs.suite }} || true
+
+      - name: Upload Allure Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: target/allure-results
+
+      - name: Install Allure CLI
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip
+          unzip allure-2.29.0.zip -d /opt/
+          echo "/opt/allure-2.29.0/bin" >> $GITHUB_PATH
+
+      - name: Generate Allure Report
+        if: always()
+        run: allure generate target/allure-results -o target/allure-report --clean
+
+      - name: Upload Allure Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/allure-report
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: success() || failure()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-report
+          keep_files: false
+
+      - name: Add Report Link to Summary
+        if: always()
+        run: echo "🔗 [View Allure Report](https://abharish480.github.io/BankAPIDemo_RestAssured/)" >> $GITHUB_STEP_SUMMARY
