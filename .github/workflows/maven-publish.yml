@@ -45,6 +45,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+          
+       # Step 2.5: Clean Allure results   
+      - name: Clean old Allure results
+        run: rm -rf target/allure-results || true
+
 
       # Step 3: Run Maven tests
       - name: Run Tests with Maven
@@ -62,7 +67,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: allure-results
+          path: target/allure-results
 
       # Step 5: Install Allure CLI
       - name: Install Allure CLI
@@ -92,6 +97,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: target/allure-report
+          keep_files: false
       # Step 9: Allure Report link on workflow
       - name: Add Allure Report link to summary
         if: always()
