@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"4e2e75bff43da3d3cb69eaaac59d10e8","name":"Authentication service","statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1}}]}
+{"total":1,"items":[{"uid":"4e2e75bff43da3d3cb69eaaac59d10e8","name":"Authentication service","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}}]}
