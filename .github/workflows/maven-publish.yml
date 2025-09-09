@@ -52,7 +52,7 @@ jobs:
           mvn clean test \
             -Denv=${{ github.event.inputs.environment }} \
             -Dbrowser=${{ github.event.inputs.browser }} \
-            -Dcucumber.filter.tags="${{ github.event.inputs.tags }}" || true
+            -Dcucumber.filter.tags="${{ github.event.inputs.tags }}"
 
       # Step 4: Upload Allure results as an artifact
       - name: Upload Allure Results
@@ -69,10 +69,6 @@ jobs:
           unzip allure-2.29.0.zip -d /opt/
           export PATH="/opt/allure-2.29.0/bin:$PATH"
           echo "/opt/allure-2.29.0/bin" >> $GITHUB_PATH
-          
-      - name: Debug:List Allure Results
-          if:always()
-          run:ls -R target/allure-results || echo "No results found"
 
       # Step 6: Generate Allure Report
       - name: Generate Allure Report
